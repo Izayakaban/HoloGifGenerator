@@ -12,7 +12,7 @@ clearGifsButton.addEventListener("click", clearGifs);
 
 async function grabGifFromApi(query) {
 
-  const response = await axios.get(`http://api.giphy.com/v1/gifs/search?q=${query}&api_key=${giphyCpiKey}&limit=10`);
+  const response = await axios.get(`https://api.giphy.com/v1/gifs/search?q=${query}&api_key=${giphyCpiKey}&limit=10`);
 
   return response.data.data.map((val) => {
     return {
